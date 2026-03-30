@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Илюза Султанова](https://up.htmlacademy.ru/htmlcss-individual/3/user/2101285).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
+* Сайт: [Мой проект Седона](https://ilyuzasultanova.github.io/2101285-sedona-3/).
 
 ---
 
