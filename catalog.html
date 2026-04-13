@@ -5,6 +5,7 @@
     <title>
       HTML Academy: Седона
     </title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -48,106 +49,111 @@
       </nav>
     </header>
     <main class="main-catalog">
-      <header class="main-header">
-        <h1 class="main-header-title">
-          Гостиницы Седоны
-        </h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
-              Вернуться на главную страницу
-            </a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">
-              Гостиницы
-            </a>
-          </li>
-        </ul>
-      </header>
-      <section class="search-filters">
-        <h2 class="visually-hidden">
-          Фильтры для поиска
-        </h2>
-        <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="infrastructure-filters">
-            <legend class="infrastructure-title">
-              Инфраструктура:
-            </legend>
-            <label class="control-name" for="swimming-pool">
-              Бассейн
-            </label>
-            <input class="control" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
-            <label class="control-name" for="parking">
-              Парковка
-            </label>
-            <input class="control" type="checkbox" id="parking" name="parking" checked>
-            <label class="control-name" for="wi-fi">
-              Wi-Fi
-            </label>
-            <input class="control" type="checkbox" id="wi-fi" name="wi-fi">
-          </fieldset>
-          <fieldset class="housing-filters">
-            <legend class="housing-title">
-              Тип жилья:
-            </legend>
-            <label class="control-name" for="hotel">
-              Гостиница
-            </label>
-            <input class="control" type="radio" name="housing-type" id="hotel" value="hotel" checked>
-            <label class="control-name" for="motel">
-              Мотель
-            </label>
-            <input class="control" type="radio" name="housing-type" id="motel" value="motel">
-            <label class="control-name" for="apartment">
-              Апартаменты
-            </label>
-            <input class="control" type="radio" name="housing-type" id="apartment" value="apartment">
-          </fieldset>
-          <fieldset class="price">
-            <legend class="price-title">
-              Стоимость, ₽:
-            </legend>
-            <label for="price-min">
-              от
-            </label>
-            <input class="price-range" type="number" id="price-min" name="price-min" min="0" max="9000" value="0">
-            <label for="price-max">
-              до
-            </label>
-            <input class="price-range" type="number" id="price-max" name="price-max" min="0" max="9000" value="9000">
-          </fieldset>
-          <button class="button" type="submit">
-            Применить
-          </button>
-          <button class="button" type="reset">
-            Сбросить
-          </button>
-        </form>
-      </section>
-      <section class="hotels-found">
+      <div class="search-wrapper">
+        <header class="main-header color-second">
+          <h1 class="main-header-title">
+            Гостиницы Седоны
+          </h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">
+                Вернуться на главную страницу
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">
+                Гостиницы
+              </a>
+            </li>
+          </ul>
+        </header>
+        <section class="search-filters color-second">
+          <h2 class="visually-hidden">
+            Фильтры для поиска
+          </h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="infrastructure-filters">
+              <legend class="infrastructure-title">
+                Инфраструктура:
+              </legend>
+              <label class="control-name" for="swimming-pool">
+                Бассейн
+              </label>
+              <input class="control" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
+              <label class="control-name" for="parking">
+                Парковка
+              </label>
+              <input class="control" type="checkbox" id="parking" name="parking" checked>
+              <label class="control-name" for="wi-fi">
+                Wi-Fi
+              </label>
+              <input class="control" type="checkbox" id="wi-fi" name="wi-fi">
+            </fieldset>
+            <fieldset class="housing-filters">
+              <legend class="housing-title">
+                Тип жилья:
+              </legend>
+              <label class="control-name" for="hotel">
+                Гостиница
+              </label>
+              <input class="control" type="radio" name="housing-type" id="hotel" value="hotel" checked>
+              <label class="control-name" for="motel">
+                Мотель
+              </label>
+              <input class="control" type="radio" name="housing-type" id="motel" value="motel">
+              <label class="control-name" for="apartment">
+                Апартаменты
+              </label>
+              <input class="control" type="radio" name="housing-type" id="apartment" value="apartment">
+            </fieldset>
+            <fieldset class="price">
+              <legend class="price-title">
+                Стоимость, ₽:
+              </legend>
+              <label for="price-min">
+                от
+              </label>
+              <input class="price-range" type="number" id="price-min" name="price-min" min="0" value="0">
+              <label for="price-max">
+                до
+              </label>
+              <input class="price-range" type="number" id="price-max" name="price-max" min="0" value="9000">
+            </fieldset>
+            <button class="button" type="submit">
+              Применить
+            </button>
+            <button class="button" type="reset">
+              Сбросить
+            </button>
+          </form>
+        </section>
+      </div>
+      <section class="search-results">
         <h2 class="visually-hidden">
           Результаты поиска
         </h2>
-        <p class="hotels-number">
-          Найдено гостиниц: 38
+        <p class="search-results-title">
+          Найдено гостиниц:
+          <span class="hotels-number">
+            38
+          </span>
         </p>
         <select class="sort-order" name="sort-order" aria-label="Сортировка">
           <option value="cheap">Сначала дешевые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
-        <a href="catalog.html?view=tile" class="button button-active">
+        <a href="catalog.html?view=tile" class="view-button button-active">
           <span class="visually-hidden">
             Показать в виде плитки
           </span>
         </a>
-        <a href="catalog.html?view=card" class="button">
+        <a href="catalog.html?view=card" class="view-button">
           <span class="visually-hidden">
             Показать в виде карточек
           </span>
         </a>
-        <a href="catalog.html?view=list" class="button">
+        <a href="catalog.html?view=list" class="view-button">
           <span class="visually-hidden">
             Показать в виде списка
           </span>
@@ -286,7 +292,6 @@
       </section>
     </main>
     <footer class="page-footer">
-    <section class="socials">
       <h2 class="visually-hidden">
         Наши социальные сети
       </h2>
@@ -313,8 +318,6 @@
           </a>
         </li>
       </ul>
-    </section>
-    <section class="contacts">
       <h2 class="visually-hidden">
         Наши контакты
       </h2>
@@ -323,13 +326,12 @@
           +7 (812) 812-12-12
         </a>
       </address>
-    </section>
-    <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-      <span class="visually-hidden">
-        Сайт разработан HTML Academy
-      </span>
-      <img class="html-academy-logo" src="images/content/html-academy-logo.svg" width="115" height="33" alt="Логотип разработчика">
-    </a>
+      <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="visually-hidden">
+          Сайт разработан HTML Academy
+        </span>
+        <img class="html-academy-logo" src="images/content/html-academy-logo.svg" width="115" height="33" alt="Логотип разработчика">
+      </a>
     </footer>
   </body>
 </html>

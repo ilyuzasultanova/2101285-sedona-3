@@ -5,6 +5,7 @@
     <title>
       HTML Academy: Седона
     </title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -14,7 +15,7 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current">
+            <a class="navigation-link navigation-link-current" href="index.html">
               Главная
             </a>
           </li>
@@ -64,44 +65,50 @@
         <p class="advantages-subtitle">
           Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
         </p>
-        <dl class="advantages-list">
-          <dt class="advantages-item">
-            Настоящий городок
-          </dt>
-          <dd class="advantages-description">
-            Седона — не аттракцион для туристов, там течёт своя жизнь
-          </dd>
-          <dd>
+        <ul class="advantages-list">
+          <li class="advantages-item">
+            <h3 class="advantages-item-title color-second">
+              Настоящий городок
+            </h3>
+            <p class="advantages-description color-second">
+              Седона — не аттракцион для туристов, там течёт своя жизнь
+            </p>
             <img class="advantages-image" width="800" height="385" src="images/content/sedona-street.jpg" alt="Улица Седоны">
-          </dd>
-          <dt class="advantages-item">
-            Небольшая площадь
-          </dt>
-          <dd class="advantages-description">
-            Все достопримечательности находятся очень близко
-          </dd>
-          <dt class="advantages-item">
-            Красивая дорога
-          </dt>
-          <dd class="advantages-description">
-            Ехать в Седону из Лас-Вегаса совсем не скучно!
-          </dd>
-          <dt class="advantages-item">
-            Мало туристов
-          </dt>
-          <dd class="advantages-description">
-            Большинство едет в Гранд Каньон и толпится там
-          </dd>
-          <dd>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-item-title">
+              Небольшая площадь
+            </h3>
+            <p class="advantages-description">
+              Все достопримечательности находятся очень близко
+            </p>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-item-title">
+              Красивая дорога
+            </h3>
+            <p class="advantages-description">
+              Ехать в Седону из Лас-Вегаса совсем не скучно!
+            </p>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-item-title">
+              Мало туристов
+            </h3>
+            <p class="advantages-description">
+              Большинство едет в Гранд Каньон и толпится там
+            </p>
+          </li>
+          <li class="advantages-item">
             <img class="advantages-image" src="images/content/devils-bridge.jpg" width="800" height="385" alt="Мост дьявола">
-          </dd>
-          <dt class="advantages-item">
-            Там есть мост дьявола
-          </dt>
-          <dd class="advantages-description">
-            Да, по нему можно пройти! Если вы осмелитесь, разумеется
-          </dd>
-        </dl>
+            <h3 class="advantages-item-title color-second">
+              Там есть мост дьявола
+            </h3>
+            <p class="advantages-description color-second">
+              Да, по нему можно пройти! Если вы осмелитесь, разумеется
+            </p>
+          </li>
+        </ul>
       </section>
       <section class="services">
         <h2 class="visually-hidden">
@@ -113,26 +120,32 @@
         <p class="services-subtitle">
           Опытный персонал и качественное обслуживание!
         </p>
-        <dl class="services-list">
-          <dt class="services-item">
-            Жильё
-          </dt>
-          <dd class="services-description">
-            Рекомендуем пожить в настоящем мотеле, всё как в кино!
-          </dd>
-          <dt class="services-item">
-            Еда
-          </dt>
-          <dd class="services-description">
-            Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
-          </dd>
-          <dt class="services-item">
-            Сувениры
-          </dt>
-          <dd class="services-description">
-            Не только китайского, но и настоящего местного производства!
-          </dd>
-        </dl>
+        <ul class="services-list">
+          <li class="services-item">
+            <h3 class="services-item-title">
+              Жильё
+            </h3>
+            <p class="services-description">
+              Рекомендуем пожить в настоящем мотеле, всё как в кино!
+            </p>
+          </li>
+          <li class="services-item">
+            <h3 class="services-item-title">
+              Еда
+            </h3>
+            <p class="services-description">
+              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
+            </p>
+          </li>
+          <li class="services-item">
+            <h3 class="services-item-title">
+              Сувениры
+            </h3>
+            <p class="services-description">
+              Не только китайского, но и настоящего местного производства!
+            </p>
+          </li>
+        </ul>
       </section>
       <section class="apartment-search">
         <h2 class="visually-hidden">
@@ -144,15 +157,15 @@
         <p class="apartment-search-subtitle">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#myModal">
+        <button type="button search-button" class="button">
           Поиск гостиницы в Седоне
         </button>
       </section>
       <section class="subscription">
-        <h2 class="subscription-title">
+        <h2 class="subscription-title color-second">
           Подпишитесь на рассылку
         </h2>
-        <p class="subscription-subtitle">
+        <p class="subscription-subtitle color-second">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -160,14 +173,13 @@
             Укажите ваш e-mail
           </label>
           <input class="email-field" type="email" name="user-email" id="user-email" placeholder="Ваш e-mail" required>
-          <button class="button" type="submit">
+          <button class="button subscription-button" type="submit">
             Подписаться
           </button>
         </form>
       </section>
     </main>
     <footer class="page-footer">
-    <section class="socials">
       <h2 class="visually-hidden">
         Наши социальные сети
       </h2>
@@ -194,8 +206,6 @@
           </a>
         </li>
       </ul>
-    </section>
-    <section class="contacts">
       <h2 class="visually-hidden">
         Наши контакты
       </h2>
@@ -204,13 +214,12 @@
           +7 (812) 812-12-12
         </a>
       </address>
-    </section>
-    <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-      <span class="visually-hidden">
-        Сайт разработан HTML Academy
-      </span>
-      <img class="html-academy-logo" src="images/content/html-academy-logo.svg" width="115" height="33" alt="Логотип разработчика">
-    </a>
+      <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="visually-hidden">
+          Сайт разработан HTML Academy
+        </span>
+        <img class="html-academy-logo" src="images/content/html-academy-logo.svg" width="115" height="33" alt="Логотип разработчика">
+      </a>
     </footer>
   </body>
 </html>
