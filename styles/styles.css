@@ -23,6 +23,32 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: none;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 50px;
+  border-radius: 4px;
+  border: none;
+}
+
 .page-header {
   font-size: 20px;
   line-height: 24px;
@@ -35,65 +61,17 @@ body {
   text-decoration: none;
 }
 
-.button {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #756157;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.favourite {
-  background-color: #7db54f;
-}
-
-.add-to-favourite {
-  background-color: #81B3D3;
+.main-index {
+  text-align: center;
 }
 
 .hero {
-  background-color: #8db7cf;
-  background-image: url("../images/background/hero-background.jpg"), url("../images/background/divider.svg");
-  background-position: center top, center bottom;
-  background-size: cover, 100% auto;
+  height: 485px;
+  background-color: #507da5;
+  background-image: url("../images/background/divider.svg"), url("../images/background/hero-background.jpg");
+  background-position: center bottom, center top;
+  background-size: 100% auto, cover;
   background-repeat: no-repeat, no-repeat;
-}
-
-.advantages-item {
-  background-color: #f0f6fa;
-}
-
-.advantages-item:first-child,
-.advantages-item:last-child {
-  background-color: #82b3d3;
-}
-
-.advantages-item:nth-child(3) {
-  background-color: #e6f0f6;
-}
-
-.services-item:first-child,
-.services-item:last-child {
-  background-color: #f0f6fa;
-}
-
-.subscription {
-  background-color: #81B3D3;
-  background-image: url(../images/background/subscribe-background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.search-wrapper {
-  background-color: #81B3D3;
-  background-image: url(../images/background/catalog-background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .advantages-title,
@@ -125,10 +103,20 @@ body {
   text-transform: uppercase;
 }
 
-.search-button,
-.subscription-button {
-  font-size: 20px;
-  line-height: 36px;
+.advantages-item {
+  background-color: #f0f6fa;
+}
+
+.advantages-odd {
+  background-color: #e6f0f6;
+}
+
+.advantage-with-image {
+  background-color: #82b3d3;
+}
+
+.services-item:nth-child(odd) {
+  background-color: #f0f6fa;
 }
 
 .email-field,
@@ -137,12 +125,95 @@ body {
   line-height: 24px;
 }
 
+.search-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.subscription-index {
+  background-color: #507da5;
+  background-image: url(../images/background/subscribe-background.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.subscription-button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82b3d3;
+}
+
+.contacts-address {
+  text-align: center;
+}
+
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.search-wrapper {
+  background-color: #507da5;
+  background-image: url(../images/background/catalog-background.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-header-title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-name {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control-name {
+  line-height: 23px;
+}
+
+.apply-button {
+  background-color: #82b3d3;
+}
+
+.reset-button {
+  background-color: transparent;
+}
+
 .sort-order {
   font-family: inherit;
 }
 
-.color-second {
-  color: #ffffff;
+.housing-card-link {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.add-to-favourite {
+  background-color: #81b3d3;
+}
+
+.favourite {
+  background-color: #7db54f;
+}
+
+.housing-card-rating {
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .pagination-link {
@@ -151,12 +222,15 @@ body {
   text-decoration: none;
 }
 
-.housing-card-link {
-  color: #000000;
-  text-decoration: none;
-}
-
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+}
+
+.subscription {
+  text-align: center;
+}
+
+.color-second {
+  color: #ffffff;
 }
