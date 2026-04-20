@@ -14,12 +14,29 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #333333;
+  background-color: #f1f1f1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: #ffffff;
 }
 
@@ -54,11 +71,39 @@ body {
   line-height: 24px;
   font-weight: 700;
   color: #000000;
+  display: flex;
+  padding: 0 70px;
+}
+
+.header-logo {
+  margin-right: auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  width: 465px;
+  margin: 0;
+  margin-right: 110px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navigation-item {
+  padding: 20px 16px;
 }
 
 .navigation-link {
   color: inherit;
   text-decoration: none;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .main-index {
@@ -67,6 +112,8 @@ body {
 
 .hero {
   height: 485px;
+  padding-top: 51px;
+  margin-bottom: 69px;
   background-color: #507da5;
   background-image: url("../images/background/divider.svg"), url("../images/background/hero-background.jpg");
   background-position: center bottom, center top;
@@ -86,12 +133,19 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-subtitle,
-.services-subtitle,
-.apartment-search-subtitle,
-.subscription-subtitle {
+.advantages-subtitle {
+  margin-bottom: 90px;
   font-size: 22px;
   line-height: 26px;
+}
+
+.advantages-list,
+.socials-list,
+.housing-card-list,
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .advantages-item-title,
@@ -101,6 +155,10 @@ body {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.advantages-image {
+  vertical-align: middle;
 }
 
 .advantages-item {
@@ -115,22 +173,50 @@ body {
   background-color: #82b3d3;
 }
 
+.services-subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 64px;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+  min-height: 400px;
+  list-style: none;
+  display: flex;
+}
+
+.services-item {
+  padding: 81px 85px;
+  width: 400px;
+}
+
 .services-item:nth-child(odd) {
   background-color: #f0f6fa;
 }
 
-.email-field,
-.price {
-  font-family: inherit;
-  line-height: 24px;
+.apartment-search {
+  padding: 96px 304px;
+}
+
+.apartment-search-subtitle {
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .search-button {
   font-size: 20px;
   line-height: 36px;
+  display: block;
+  width: 376px;
+  height: 52px;
 }
 
 .subscription-index {
+  padding-top: 96px;
+  padding-bottom: 104px;
   background-color: #507da5;
   background-image: url("../images/background/subscribe-background.jpg");
   background-position: center center;
@@ -138,30 +224,29 @@ body {
   background-repeat: no-repeat;
 }
 
+.subscription-subtitle {
+  margin-bottom: 54px;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.email-field {
+  font-family: inherit;
+  line-height: 24px;
+  width: 452px;
+  height: 52px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+
 .subscription-button {
+  margin-left: -5px;
+  width: 232px;
+  height: 52px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82b3d3;
-}
-
-.contacts-address {
-  text-align: center;
-}
-
-.contacts-phone {
-  font-size: 40px;
-  line-height: 40px;
-  color: #000000;
-  text-decoration: none;
-  font-style: normal;
-}
-
-.search-wrapper {
-  background-color: #507da5;
-  background-image: url("../images/background/catalog-background.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  border-radius: 0 4px 4px 0;
 }
 
 .main-header-title {
@@ -174,6 +259,20 @@ body {
   line-height: 21px;
 }
 
+.search-wrapper {
+  height: 412px;
+  background-color: #507da5;
+  background-image: url("../images/background/catalog-background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 35px 70px 70px;
+}
+
+.search-form {
+  display: flex;
+}
+
 .filter-name {
   font-size: 20px;
   line-height: 24px;
@@ -183,12 +282,39 @@ body {
   line-height: 23px;
 }
 
+.infrastructure-filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.housing-filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-family: inherit;
+  line-height: 24px;
+}
+
+.price-range {
+  width: 143px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
 .apply-button {
   background-color: #82b3d3;
+  align-self: center;
 }
 
 .reset-button {
   background-color: transparent;
+  align-self: center;
+}
+
+.search-results {
+  padding: 50px 70px 60px 70px;
 }
 
 .sort-order {
@@ -216,10 +342,27 @@ body {
   border-radius: 4px;
 }
 
+.email-catalog {
+  background-color: #f1f1f1;
+}
+
+.pagination {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
 .pagination-link {
   color: #ffffff;
   background-color: #82b3d3;
   text-decoration: none;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 4px;
 }
 
 .pagination-current {
@@ -227,8 +370,42 @@ body {
   background-color: #f2f2f2;
 }
 
+.pagination-dots {
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+}
+
 .subscription {
   text-align: center;
+}
+
+.page-footer {
+  padding-top: 45px;
+  padding-bottom: 35px;
+  display: flex;
+}
+
+.socials-list {
+  margin-right: auto;
+}
+
+.contacts-address {
+  text-align: center;
+}
+
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.developer-link {
+  margin-left: auto;
 }
 
 .color-second {
