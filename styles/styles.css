@@ -86,7 +86,7 @@ body {
   width: 465px;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
 }
 
 .navigation-link {
@@ -134,7 +134,6 @@ body {
 }
 
 .main-index {
-  margin-top: -10px;
   flex-grow: 1;
   text-align: center;
 }
@@ -176,28 +175,40 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
 }
 
 .advantages-item {
+  padding-top: 112px;
   min-height: 385px;
+  width: 400px;
+  box-sizing: border-box;
   background-color: #f0f6fa;
 }
 
-.advantages-odd {
-  background-color: #e6f0f6;
-}
-
 .advantage-with-image {
+  padding-top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #82b3d3;
 }
 
+.advantages-image {
+  object-fit: contain;
+}
+
+.advantage-wrapper {
+  padding-top: 112px;
+  margin: 0 auto;
+}
+
+.advantages-odd {
+  background-color: #e6f0f6;
+}
+
 .advantages-item-title {
   margin: 0 auto 62px;
-  padding: 112px 0 0;
   width: 175px;
   font-size: 24px;
   line-height: 28px;
@@ -208,7 +219,6 @@ body {
 
 .advantages-description {
   margin: 0 auto;
-  padding: 0 85px;
   width: 230px;
 }
 
@@ -237,14 +247,16 @@ body {
 .services-list {
   margin: 0;
   padding: 0;
-  min-height: 385px;
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .services-item {
-  padding: 183px 85px 81px;
   width: 400px;
+  min-height: 385px;
+  box-sizing: border-box;
+  padding-top: 183px;
 }
 
 .services-item:nth-child(odd) {
@@ -252,7 +264,7 @@ body {
 }
 
 .services-item-title {
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
   padding: 0;
   font-size: 24px;
   line-height: 28px;
@@ -349,10 +361,6 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.main-catalog {
-  margin-top: -10px;
-}
-
 .main-header-title {
   margin: 0;
   padding: 0;
@@ -444,20 +452,26 @@ body {
   padding: 50px 70px 60px;
 }
 
-.sort-wrapper {
+.results-sort-wrapper {
   margin: 0 0 40px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .search-results-title {
-  margin: 0 200px 0 0;
+  max-width: 450px;
+  margin: 0;
   padding: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.sort-wrapper {
+  display: flex;
 }
 
 .sort-order {
@@ -472,7 +486,14 @@ body {
   border-radius: 4px;
 }
 
-.sort-link {
+.view-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.view-item {
   min-width: 48px;
   min-height: 48px;
   box-sizing: border-box;
@@ -480,31 +501,42 @@ body {
   border-radius: 4px;
 }
 
-.sort-link:not(:last-child) {
+.view-item:not(:last-child) {
   margin-right: 8px;
 }
 
+.view-current {
+  border-color: #000000;
+}
+
 .housing-card-list {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   padding: 0;
   display: grid;
-  grid-template-columns: 340px 340px 340px;
-  column-gap: 20px;
-  list-style: none;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+  list-style-type: none;
 }
 
 .housing-card {
-  margin: 0 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: auto 1fr;
+  justify-content: space-between;
   padding: 20px;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
 }
 
 .housing-card-image {
+  grid-column: 1 / -1;
   margin: 0 0 16px;
+  object-fit: contain;
 }
 
 .housing-card-title {
+  grid-column: 1 / -1;
+  min-width: 300px;
   margin: 0 0 16px;
   font-size: 24px;
   line-height: 28px;
@@ -516,40 +548,45 @@ body {
   text-decoration: none;
 }
 
-.housing-card-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .housing-card-type {
+  grid-column: 1 / 2;
   margin-bottom: 16px;
   min-width: 140px;
 }
 
+.housing-card-price {
+  grid-column: 2 / 3;
+  justify-self: end;
+}
+
 .details-button {
+  grid-column: 1 / 2;
   margin-bottom: 16px;
   padding-inline: 26px;
   background-color: #756157;
 }
 
 .add-to-favourite {
+  grid-column: 2 / 3;
   margin-bottom: 16px;
   padding-inline: 20px;
   background-color: #81b3d3;
 }
 
 .favourite {
+  grid-column: 2 / 3;
   margin-bottom: 16px;
   padding-inline: 18px;
   background-color: #7db54f;
 }
 
 .rating-stars {
+  grid-column: 1 / 2;
   min-width: 140px;
 }
 
 .housing-card-rating {
+  grid-column: 2 / 3;
   padding: 9px 22px 8px 23px;
   font-size: 16px;
   line-height: 20px;
@@ -561,13 +598,12 @@ body {
 .pagination {
   margin: 0 0 60px;
   padding: 40px 0 0;
-  width: 400px;
   display: flex;
-  justify-content: space-between;
-  list-style: none;
+  list-style-type: none;
 }
 
 .pagination-link {
+  margin: 0 8px 0 0;
   width: 60px;
   height: 60px;
   box-sizing: border-box;
@@ -586,6 +622,7 @@ body {
 }
 
 .pagination-dots {
+  margin: 0 8px 0 0;
   display: block;
   width: 60px;
   height: 60px;
@@ -604,7 +641,7 @@ body {
   padding: 58px 0 48px;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
 }
 
 .socials-item {
@@ -619,6 +656,7 @@ body {
 .contacts-address {
   padding: 45px 0 35px;
   text-align: center;
+  max-width: 350px;
 }
 
 .contacts-phone {

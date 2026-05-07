@@ -145,33 +145,43 @@
           <h2 class="visually-hidden">
             Результаты поиска
           </h2>
-          <div class="sort-wrapper">
+          <div class="results-sort-wrapper">
             <p class="search-results-title">
             Найдено гостиниц:
               <span class="hotels-number">
                 38
               </span>
             </p>
-            <select class="sort-order" name="sort-order" aria-label="Сортировка">
-              <option value="cheap">Сначала дешевые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
-            <a class="sort-link" href="catalog.html?view=tile" class="view-button button-active">
-              <span class="visually-hidden">
-                Показать в виде плитки
-              </span>
-            </a>
-            <a class="sort-link" href="catalog.html?view=card" class="view-button">
-              <span class="visually-hidden">
-                Показать в виде карточек
-              </span>
-            </a>
-            <a class="sort-link" href="catalog.html?view=list" class="view-button">
-              <span class="visually-hidden">
-                Показать в виде списка
-              </span>
-            </a>
+            <div class="sort-wrapper">
+              <select class="sort-order" name="sort-order" aria-label="Сортировка">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+              <ul class="view-list">
+                <li class="view-item view-current">
+                  <a class="view-link" href="catalog.html?view=tile">
+                    <span class="visually-hidden">
+                      Показать в виде плитки
+                    </span>
+                  </a>
+                </li>
+                <li class="view-item">
+                  <a class="view-link" href="catalog.html?view=card">
+                    <span class="visually-hidden">
+                      Показать в виде карточек
+                    </span>
+                  </a>
+                </li>
+                <li class="view-item">
+                  <a class="view-link" href="catalog.html?view=list">
+                    <span class="visually-hidden">
+                      Показать в виде списка
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <ul class="housing-card-list">
             <li class="housing-card">
@@ -181,20 +191,18 @@
                   Amara Resort & Spa
                 </h3>
               </a>
-              <div class="housing-card-wrapper">
-                <span class="housing-card-type">Гостиница</span>
-                <span class="housing-card-price">От 4000 ₽</span>
-                <a class="button details-button" href="#">Подробнее</a>
-                <button class="button add-to-favourite" type="button">
-                  В избранное
-                </button>
-                <span class="rating-stars">
-                  <span class="visually-hidden">Четыре звезды</span>
-                </span>
-                <span class="housing-card-rating">
-                  Рейтинг: 8,5
-                </span>
-              </div>
+              <span class="housing-card-type">Гостиница</span>
+              <span class="housing-card-price">От 4000 ₽</span>
+              <a class="button details-button" href="#">Подробнее</a>
+               <button class="button add-to-favourite" type="button">
+                 В избранное
+              </button>
+               <span class="rating-stars">
+                 <span class="visually-hidden">Четыре звезды</span>
+              </span>
+              <span class="housing-card-rating">
+                Рейтинг: 8,5
+              </span>
             </li>
             <li class="housing-card">
               <a class="housing-card-link" href="#">
@@ -203,42 +211,38 @@
                   Villas at Poco Diablo
                 </h3>
               </a>
-              <div class="housing-card-wrapper">
-                <span class="housing-card-type">Гостиница</span>
-                <span class="housing-card-price">От 5000 ₽</span>
-                <a class="button details-button" href="#">Подробнее</a>
-                <button class="button favourite" type="button">
-                  В избранном
-                </button>
-                <span class="rating-stars">
-                  <span class="visually-hidden">Четыре звезды</span>
-                </span>
-                <span class="housing-card-rating">
-                  Рейтинг: 9,2
-                </span>
-              </div>
+              <span class="housing-card-type">Гостиница</span>
+              <span class="housing-card-price">От 5000 ₽</span>
+              <a class="button details-button" href="#">Подробнее</a>
+              <button class="button favourite" type="button">
+                В избранном
+              </button>
+              <span class="rating-stars">
+                <span class="visually-hidden">Четыре звезды</span>
+              </span>
+              <span class="housing-card-rating">
+                Рейтинг: 9,2
+              </span>
             </li>
             <li class="housing-card">
-             <a class="housing-card-link" href="#">
+              <a class="housing-card-link" href="#">
                 <img class="housing-card-image" src="images/content/desert-quail-inn.jpg" width="300" height="212" alt="Скалы, покрытые зеленью">
                 <h3 class="housing-card-title">
                   Desert Quail Inn
                 </h3>
               </a>
-              <div class="housing-card-wrapper">
-                <span class="housing-card-type">Гостиница</span>
-                <span class="housing-card-price">От 2500 ₽</span>
-                <a class="button details-button" href="#">Подробнее</a>
-                <button class="button add-to-favourite" type="button">
-                  В избранное
-                </button>
-                <span class="rating-stars">
-                  <span class="visually-hidden">Три звезды</span>
-                </span>
-                <span class="housing-card-rating">
-                  Рейтинг: 6,9
-                </span>
-              </div>
+              <span class="housing-card-type">Гостиница</span>
+              <span class="housing-card-price">От 2500 ₽</span>
+              <a class="button details-button" href="#">Подробнее</a>
+              <button class="button add-to-favourite" type="button">
+                В избранное
+              </button>
+              <span class="rating-stars">
+                <span class="visually-hidden">Три звезды</span>
+              </span>
+              <span class="housing-card-rating">
+                Рейтинг: 6,9
+              </span>
             </li>
             <li class="housing-card">
               <a class="housing-card-link" href="#">
@@ -247,20 +251,18 @@
                   GreenTree Inn
                 </h3>
               </a>
-              <div class="housing-card-wrapper">
-                <span class="housing-card-type">Гостиница</span>
-                <span class="housing-card-price">От 1500 ₽</span>
-                <a class="button details-button" href="#">Подробнее</a>
-                <button class="button add-to-favourite" type="button">
-                  В избранное
-                </button>
-                <span class="rating-stars">
-                  <span class="visually-hidden">Две звезды</span>
-                </span>
-                <span class="housing-card-rating">
-                  Рейтинг: 5,0
-                </span>
-              </div>
+              <span class="housing-card-type">Гостиница</span>
+              <span class="housing-card-price">От 1500 ₽</span>
+              <a class="button details-button" href="#">Подробнее</a>
+              <button class="button add-to-favourite" type="button">
+                В избранное
+              </button>
+              <span class="rating-stars">
+                <span class="visually-hidden">Две звезды</span>
+              </span>
+              <span class="housing-card-rating">
+                Рейтинг: 5,0
+              </span>
             </li>
           </ul>
           <ul class="pagination">
